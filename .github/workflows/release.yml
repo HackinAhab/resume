@@ -19,7 +19,7 @@ jobs:
 
       - name: Compile typst
         run: |
-          typst compile resume.typ --input title=${{ vars.TITLE }} --input author=${{ vars.AUTHOR }} --input email=${{ vars.EMAIL }} --input links=${{ vars.GITHUB }} --input linkedin=${{ vars.LINKEDIN }} --font-path fonts
+          typst compile resume.typ --input title=${{ vars.TITLE }} --input author=${{ vars.AUTHOR }} --input email=${{ vars.EMAIL }} --input github=${{ vars.GITHUB }} --input linkedin=${{ vars.LINKEDIN }} --font-path fonts
 
       - name: Get tag name
         id: tag-name
