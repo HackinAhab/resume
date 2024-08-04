@@ -2,7 +2,7 @@
 
 ### [My resume](https://github.com/MrLadas/resume/releases/latest/download/resume.pdf) written in [Typst](https://github.com/typst/typst)
 
-Personal Customization from [jLevere](https://github.com/jLevere/resume)
+Forked from my good friend [jLevere](https://github.com/jLevere/resume)
 
 This repository contains my personal resume written in Typst. These documents are compiled using the Typst compiler in a GitHub Actions workflow. The compiler extracts input variables such as name and email directly from GitHub, which are then passed through the [--inputs](https://typst.app/docs/reference/foundations/sys/) CLI flag during the compilation process. Typst compiles the resume into a PDF format, and this PDF is then published as a release.
 
