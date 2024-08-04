@@ -31,4 +31,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create ${{ steps.tag-name.outputs.tagname }} -t "Resume" -n "Generated documents (${{ steps.tag-name.outputs.tagname }})"
-          gh release upload ${{ steps.tag-name.outputs.tagname }} *.pdf
+          gh release upload ${{ steps.tag-name.outputs.tagname }} resume.pdf
