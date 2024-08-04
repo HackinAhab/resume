@@ -6,7 +6,22 @@ permissions:
   contents: write
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      src: ${{ steps.changes.outputs.src }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dorny/paths-filter@v3
+      id: changes
+      with:
+        filters: |
+          src:
+            - 'src/**'
+
   build:
+    needs: changes
+    if: ${{ needs.changes.outputs.src == 'true' }}
     runs-on: ubuntu-latest
     steps:
 
@@ -19,7 +34,7 @@ jobs:
 
       - name: Compile typst
         run: |
-          typst compile resume.typ --input title=${{ vars.TITLE }} --input author=${{ vars.AUTHOR }} --input email=${{ vars.EMAIL }} --input github=${{ vars.GITHUB }} --input linkedin=${{ vars.LINKEDIN }} --font-path fonts
+          typst compile src/resume.typ --input title=${{ vars.TITLE }} --input author=${{ vars.AUTHOR }} --input email=${{ vars.EMAIL }} --input github=${{ vars.GITHUB }} --input linkedin=${{ vars.LINKEDIN }} --font-path=src/fonts resume.pdf
 
       - name: Get tag name
         id: tag-name

@@ -2,7 +2,6 @@
 
 ### [My resume](https://github.com/MrLadas/resume/releases/latest/download/resume.pdf) written in [Typst](https://github.com/typst/typst)
 
-Forked from my good friend [jLevere](https://github.com/jLevere/resume)
 
 This repository contains my personal resume written in Typst. These documents are compiled using the Typst compiler in a GitHub Actions workflow. The compiler extracts input variables such as name and email directly from GitHub, which are then passed through the [--inputs](https://typst.app/docs/reference/foundations/sys/) CLI flag during the compilation process. Typst compiles the resume into a PDF format, and this PDF is then published as a release.
 
@@ -19,10 +18,8 @@ The compilation process is automated using GitHub Actions. Whenever changes are 
 
 ## Credits
 
+Forked from my good friend [jLevere](https://github.com/jLevere/resume)
+
 This workflow is inspired by [this cool resume build system](https://github.com/mbund/resume).
 
 For more information about Typst, visit the [official TypSt GitHub repository](https://github.com/typst/typst).
-
-
-
-
