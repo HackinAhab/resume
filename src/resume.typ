@@ -70,7 +70,7 @@
 #entry(
   "United States Marine Corps",
   "Sergeant, Combat Engineer Squad Leader",
-  "Mar 2022 - May 2024",
+  "Aug 2014 - Dec 2021",
   (
     "Lead construction operations in Syria.",
     "Managed teams of diverse skill sets and technical backgrounds to ensure projects were finished on time and within resource restrictions.",
